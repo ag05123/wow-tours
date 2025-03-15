@@ -36,14 +36,9 @@
     "xss-clean": "^0.1.4"
   },
   "devDependencies": {
-    "eslint": "^9.19.0",
-    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.2.3",
-    "eslint-plugin-react": "^7.37.4",
     "parcel-bundler": "^1.12.5",
     "prettier": "^3.4.2"
   }
