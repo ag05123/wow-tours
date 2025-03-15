@@ -9,12 +9,13 @@
   "scripts": {
     "start": " nodemon server.js",
     "debug": "ndb server.js",
-    "watch.js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+    "watch.js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "axios": "^1.8.2",
     "bcryptjs": "^3.0.2",
+    "compression": "^1.8.0",
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",

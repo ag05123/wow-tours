@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const compression=require('compression');
 const path =require('path');
 const helmet=require('helmet');
 const hpp=require('hpp');
@@ -17,7 +18,7 @@ app.set('view engine' , 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname , 'public')));
-// app.use(helmet());
+//  hello app.use(helmet());
 
 // development logging
 if(process.env.NODE_ENV==='development'){
@@ -65,6 +66,8 @@ app.use(hpp({
     
     ]
 }));
+
+app.use(compression);
 
 app.use(morgan('dev'));
 
