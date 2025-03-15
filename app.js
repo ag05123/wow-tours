@@ -67,7 +67,7 @@ app.use(hpp({
     ]
 }));
 
-app.use(compression);
+
 
 app.use(morgan('dev'));
 
