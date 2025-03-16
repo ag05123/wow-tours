@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const compression=require('compression');
 const path =require('path');
 const helmet=require('helmet');
@@ -17,8 +18,11 @@ const viewRouter = require('./routers/viewrouter');
 app.set('view engine' , 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
+app.use(cors());
+app.options('*" , cors());
+
 app.use(express.static(path.join(__dirname , 'public')));
-//  hello app.use(helmet());
+ app.use(helmet());
 
 // development logging
 if(process.env.NODE_ENV==='development'){
